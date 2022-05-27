@@ -31,6 +31,8 @@ void Game::pollEvents() {
 
 void Game::update() {
     pollEvents();
+
+    _pacman.update(_window, _nodeList);
 }
 
 void Game::render() {

@@ -4,7 +4,7 @@ Ghost::Ghost(const unsigned int &posIndex, const Color &color) : Character(posIn
 
 }
 
-void Ghost::render(RenderWindow &target, maze::Node *nodeList) {
+void Ghost::render(RenderTarget &target, maze::Node *nodeList) {
     maze::Node *node = &nodeList[_posIndex];
     node->character = this;
 }

@@ -41,9 +41,19 @@ namespace maze {
         Character *character{nullptr};
     };
 
+    unsigned int nodeIndex(Node *);
+
     unsigned int column(unsigned int);
 
     unsigned int row(unsigned int);
+
+    Node *nodeUp(Node *, unsigned int);
+
+    Node *nodeRight(Node *, unsigned int);
+
+    Node *nodeDown(Node *, unsigned int);
+
+    Node *nodeLeft(Node *, unsigned int);
 
     void drawNode(RenderWindow &, Node *, unsigned int);
 

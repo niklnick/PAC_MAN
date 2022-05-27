@@ -12,7 +12,7 @@ public:
 
     explicit Ghost(const unsigned int &, const Color &);
 
-    void render(RenderWindow &, maze::Node *);
+    void render(RenderTarget &, maze::Node *);
 };
 
 

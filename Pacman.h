@@ -5,14 +5,23 @@
 #include "Character.h"
 #include "Maze.h"
 
+enum Direction{IDLE = 0, UP = -GRID_WIDTH, RIGHT = 1, DOWN = +GRID_WIDTH, LEFT = -1};
+
 class Pacman : public Character {
+    Direction _dir;
 
 public:
     Pacman() = delete;
 
     explicit Pacman(const unsigned int &);
 
-    void render(RenderWindow &, maze::Node *);
+    void move(maze::Node *);
+
+    void updateInput();
+
+    void update(const RenderTarget &, maze::Node *);
+
+    void render(RenderTarget &, maze::Node *);
 };
 
 
