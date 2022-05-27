@@ -19,6 +19,8 @@ protected:
     Color _color;
 
 public:
+    Character() = delete;
+
     explicit Character(const unsigned int &, const float &, const Color &);
 
     virtual ~Character() = default;

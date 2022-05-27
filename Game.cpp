@@ -38,6 +38,13 @@ void Game::render() {
 
     maze::drawMaze(_window, _nodeList);
 
+    _pacman.render(_window, _nodeList);
+
+    _blinky.render(_window, _nodeList);
+    _pinky.render(_window, _nodeList);
+    _inky.render(_window, _nodeList);
+    _clyde.render(_window, _nodeList);
+
     _window.display();
 }
 

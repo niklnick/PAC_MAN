@@ -16,6 +16,7 @@ void maze::drawNode(RenderWindow &window, Node *nodeList, unsigned int index) {
                      float(row(index)) * (NODE_SIZE + NODE_BORDER_WIDTH) + NODE_SIZE / 4 + NODE_BORDER_WIDTH);
     cell.setSize(Vector2f(NODE_SIZE / 2, NODE_SIZE / 2));
     cell.setFillColor(node->wall ? Color::Blue : Color::Black);
+    if (node->character) cell.setFillColor(node->character->getColor());
     window.draw(cell);
 }
 
