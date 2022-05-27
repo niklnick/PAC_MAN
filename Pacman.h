@@ -5,21 +5,11 @@
 #include "Character.h"
 
 class Pacman : public Character {
-    Clock _clock;
-    int _mouthOffset;
-
-    void drawShape(const int &);
 
 public:
-    Pacman(const float &, const float &);
+    Pacman() = delete;
 
-    void updateInput();
-
-    void update(RenderTarget const &) override;
-
-    void animate();
-
-    void render(RenderTarget &) override;
+    explicit Pacman(const unsigned int &);
 };
 
 

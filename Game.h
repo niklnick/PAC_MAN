@@ -13,10 +13,9 @@ class Game {
     RenderWindow _window{vM, "PAC-MAC", Style::Titlebar | Style::Close};
     Event _event{};
 
-    Maze::Node _nodeList[GRID_WIDTH * GRID_HEIGHT]{};
+    maze::Node _nodeList[GRID_WIDTH * GRID_HEIGHT]{};
 
-    float _movementSpeed{4.f}, _radius{16.f};
-    Pacman _pacman{_movementSpeed, _radius};
+    Pacman _pacman{9 + 15 * GRID_WIDTH};
 
 public:
     Game();

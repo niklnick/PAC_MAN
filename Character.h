@@ -2,52 +2,32 @@
 #define PAC_MAN_CHARACTER_H
 
 
-#include <cmath>
-#include <cstdlib>
-#include <iostream>
-
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Network.hpp>
 
-#define PI 3.1415926535f
-#define Deg2Rad PI / 180
+#define RADIUS 32.f
 
 using namespace std;
 using namespace sf;
 
 class Character {
 protected:
-    float _xPos, _yPos;
-    Transform _transform;
-
+    unsigned int _posIndex;
     float _radius;
-    ConvexShape _shape;
-
-    float _movementSpeed;
-    Vector2f _direction;
+    Color _color;
 
 public:
-    explicit Character(const float &, const Color &, const float &);
+    explicit Character(const unsigned int &, const float &, const Color &);
 
     virtual ~Character() = default;
 
-    virtual void setPosition(const float &, const float &);
+    [[nodiscard]] virtual const unsigned int &getPosIndex() const;
 
-    virtual void move(const Vector2f &offset);
+    [[nodiscard]] virtual const float &getRadius() const;
 
-    virtual void collision(const RenderTarget &target);
-
-    virtual void windowBoundsCollision(const RenderTarget &target);
-
-    virtual void update(const RenderTarget &);
-
-    virtual void render(RenderTarget &) = 0;
-
-    virtual Vector2f getPosition() const;
-
-    const float &getRadius() const;
+    [[nodiscard]] virtual const Color &getColor() const;
 };
 
 

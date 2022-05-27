@@ -7,9 +7,6 @@ Game::Game() {
         if (MAZE_LAYOUT[i] == '0') _nodeList[i].wall = false;
         else if (MAZE_LAYOUT[i] == '1') _nodeList[i].wall = true;
     }
-
-    _pacman.setPosition(float(_window.getView().getSize().x) / 2,
-                        float(_window.getView().getSize().y) / 2 + 5 * (NODE_SIZE + NODE_BORDER_WIDTH));
 }
 
 void Game::pollEvents() {
@@ -34,16 +31,12 @@ void Game::pollEvents() {
 
 void Game::update() {
     pollEvents();
-
-    _pacman.update(_window);
 }
 
 void Game::render() {
     _window.clear();
 
-    Maze::drawMaze(_window, _nodeList);
-
-    _pacman.render(_window);
+    maze::drawMaze(_window, _nodeList);
 
     _window.display();
 }
