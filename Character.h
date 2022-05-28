@@ -2,6 +2,8 @@
 #define PAC_MAN_CHARACTER_H
 
 
+#include <iostream>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
@@ -17,6 +19,8 @@ protected:
     unsigned int _posIndex;
     float _radius;
     Color _color;
+
+    Clock _clock;
 
 public:
     Character() = delete;

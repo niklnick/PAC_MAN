@@ -1,35 +1,11 @@
 #include "Maze.h"
 
-unsigned int maze::nodeIndex(Node *node) {
-    return 0;
-}
-
 unsigned int maze::column(unsigned int index) {
     return index % GRID_WIDTH;
 }
 
 unsigned int maze::row(unsigned int index) {
     return index / GRID_WIDTH;
-}
-
-maze::Node *maze::nodeUp(maze::Node *nodeList, unsigned int index) {
-    Node *node = &nodeList[index - GRID_WIDTH];
-    return node;
-}
-
-maze::Node *maze::nodeRight(maze::Node *nodeList, unsigned int index) {
-    Node *node = &nodeList[(index + 1) % GRID_WIDTH + row(index)];
-    return node;
-}
-
-maze::Node *maze::nodeDown(maze::Node *nodeList, unsigned int index) {
-    Node *node = &nodeList[index + GRID_WIDTH];
-    return node;
-}
-
-maze::Node *maze::nodeLeft(maze::Node *nodeList, unsigned int index) {
-    Node *node = &nodeList[(index - 1) % GRID_WIDTH + row(index)];
-    return node;
 }
 
 void maze::drawNode(RenderWindow &window, Node *nodeList, unsigned int index) {
