@@ -70,6 +70,13 @@ build CMakeFiles/PAC_MAN.dir/Character.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/
   OBJECT_DIR = CMakeFiles\PAC_MAN.dir
   OBJECT_FILE_DIR = CMakeFiles\PAC_MAN.dir
 
+build CMakeFiles/PAC_MAN.dir/Maze.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Users/neuma/Desktop/FH$ Kiel/Semester$ 6/PIC/PAC-MAN/Maze.cpp || cmake_object_order_depends_target_PAC_MAN
+  DEP_FILE = CMakeFiles\PAC_MAN.dir\Maze.cpp.obj.d
+  FLAGS = -g -std=gnu++1z
+  INCLUDES = -isystem "C:/Users/neuma/Desktop/FH Kiel/Semester 6/PIC/PAC-MAN/SFML/include"
+  OBJECT_DIR = CMakeFiles\PAC_MAN.dir
+  OBJECT_FILE_DIR = CMakeFiles\PAC_MAN.dir
+
 build CMakeFiles/PAC_MAN.dir/Pacman.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Users/neuma/Desktop/FH$ Kiel/Semester$ 6/PIC/PAC-MAN/Pacman.cpp || cmake_object_order_depends_target_PAC_MAN
   DEP_FILE = CMakeFiles\PAC_MAN.dir\Pacman.cpp.obj.d
   FLAGS = -g -std=gnu++1z
@@ -77,8 +84,8 @@ build CMakeFiles/PAC_MAN.dir/Pacman.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\PAC_MAN.dir
   OBJECT_FILE_DIR = CMakeFiles\PAC_MAN.dir
 
-build CMakeFiles/PAC_MAN.dir/Maze.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Users/neuma/Desktop/FH$ Kiel/Semester$ 6/PIC/PAC-MAN/Maze.cpp || cmake_object_order_depends_target_PAC_MAN
-  DEP_FILE = CMakeFiles\PAC_MAN.dir\Maze.cpp.obj.d
+build CMakeFiles/PAC_MAN.dir/Ghost.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Users/neuma/Desktop/FH$ Kiel/Semester$ 6/PIC/PAC-MAN/Ghost.cpp || cmake_object_order_depends_target_PAC_MAN
+  DEP_FILE = CMakeFiles\PAC_MAN.dir\Ghost.cpp.obj.d
   FLAGS = -g -std=gnu++1z
   INCLUDES = -isystem "C:/Users/neuma/Desktop/FH Kiel/Semester 6/PIC/PAC-MAN/SFML/include"
   OBJECT_DIR = CMakeFiles\PAC_MAN.dir
@@ -92,7 +99,7 @@ build CMakeFiles/PAC_MAN.dir/Maze.cpp.obj: CXX_COMPILER__PAC_MAN_Debug C$:/Users
 #############################################
 # Link the executable PAC_MAN.exe
 
-build PAC_MAN.exe: CXX_EXECUTABLE_LINKER__PAC_MAN_Debug CMakeFiles/PAC_MAN.dir/main.cpp.obj CMakeFiles/PAC_MAN.dir/Game.cpp.obj CMakeFiles/PAC_MAN.dir/Character.cpp.obj CMakeFiles/PAC_MAN.dir/Pacman.cpp.obj CMakeFiles/PAC_MAN.dir/Maze.cpp.obj | ../SFML/lib/libsfml-graphics-d.a ../SFML/lib/libsfml-window-d.a ../SFML/lib/libsfml-system-d.a
+build PAC_MAN.exe: CXX_EXECUTABLE_LINKER__PAC_MAN_Debug CMakeFiles/PAC_MAN.dir/main.cpp.obj CMakeFiles/PAC_MAN.dir/Game.cpp.obj CMakeFiles/PAC_MAN.dir/Character.cpp.obj CMakeFiles/PAC_MAN.dir/Maze.cpp.obj CMakeFiles/PAC_MAN.dir/Pacman.cpp.obj CMakeFiles/PAC_MAN.dir/Ghost.cpp.obj | ../SFML/lib/libsfml-graphics-d.a ../SFML/lib/libsfml-window-d.a ../SFML/lib/libsfml-system-d.a
   FLAGS = -g
   LINK_LIBRARIES = ../SFML/lib/libsfml-graphics-d.a  ../SFML/lib/libsfml-window-d.a  ../SFML/lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PAC_MAN.dir

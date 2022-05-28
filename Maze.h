@@ -3,12 +3,8 @@
 
 
 #include <string>
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Network.hpp>
 
-#include "Pacman.h"
+#include "Character.h."
 
 #define GRID_WIDTH 19
 #define GRID_HEIGHT 21
@@ -39,14 +35,10 @@
 "1000000000000000001" \
 "1111111111111111111"
 
-
-using namespace std;
-using namespace sf;
-
-namespace Maze {
+namespace maze {
     struct Node {
         bool wall{false};
-        unique_ptr<Pacman> pacman;
+        Character *character{nullptr};
     };
 
     unsigned int column(unsigned int);
